@@ -53,13 +53,16 @@ case "$1" in
 
     --help|-h)
         echo "Dostepne opcje:"
-        echo "--date, -d      wyswietla dzisiejsza date"
-        echo "--logs, -l      tworzy 100 plikow log"
-        echo "--logs N, -l N  tworzy N plikow log"
-        echo "--help, -h      wyswietla pomoc"
+        echo "--date, -d          wyswietla dzisiejsza date"
+        echo "--logs, -l          tworzy 100 plikow log"
+        echo "--logs N, -l N      tworzy N plikow log"
+        echo "--error, -e         tworzy 100 katalogow error z plikami"
+        echo "--error N, -e N     tworzy N katalogow error z plikami"
+        echo "--init              klonuje repozytorium i dodaje je do PATH"
+        echo "--help, -h          wyswietla pomoc"
         ;;
 
     *)
-        echo "Nieznana opcja. Użyj --help"
+        echo "Nieznana opcja. Użyj --help lub -h"
         ;;
 esac
