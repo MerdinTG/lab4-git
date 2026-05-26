@@ -1,11 +1,11 @@
 #!/bin/bash
 
 case "$1" in
-    --date)
+    --date|-d)
         date
         ;;
 
-    --logs)
+    --logs|-l)
         count=${2:-100}
 
         for i in $(seq 1 "$count")
@@ -20,7 +20,7 @@ case "$1" in
         echo "Utworzono $count plikow log."
         ;;
 
-    --help)
+    --help|-h)
         echo "Dostepne opcje:"
         echo "--date          wyswietla dzisiejsza date"
         echo "--logs          tworzy 100 plikow log"
