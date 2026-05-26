@@ -22,6 +22,24 @@ case "$1" in
         echo "Utworzono $count plikow log."
         ;;
 
+    --error|-e)
+        count=${2:-100}
+
+        for i in $(seq 1 "$count")
+        do
+            dirname="error${i}"
+            filename="${dirname}/error${i}.txt"
+
+            mkdir -p "$dirname"
+
+            echo "Nazwa pliku: error${i}.txt" > "$filename"
+            echo "Nazwa skryptu: $0" >> "$filename"
+            echo "Data: $(date)" >> "$filename"
+        done
+
+        echo "Utworzono $count katalogow error z plikami."
+        ;;
+
     --init)
         repo_name=$(basename "$REPO_URL" .git)
 
