@@ -6,7 +6,9 @@ case "$1" in
         ;;
 
     --logs)
-        for i in $(seq 1 100)
+        count=${2:-100}
+
+        for i in $(seq 1 "$count")
         do
             filename="log${i}.txt"
 
@@ -15,7 +17,7 @@ case "$1" in
             echo "Data: $(date)" >> "$filename"
         done
 
-        echo "Utworzono 100 plikow log."
+        echo "Utworzono $count plikow log."
         ;;
 
     *)
