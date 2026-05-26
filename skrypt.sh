@@ -20,6 +20,14 @@ case "$1" in
         echo "Utworzono $count plikow log."
         ;;
 
+    --help)
+        echo "Dostepne opcje:"
+        echo "--date          wyswietla dzisiejsza date"
+        echo "--logs          tworzy 100 plikow log"
+        echo "--logs N        tworzy N plikow log"
+        echo "--help          wyswietla pomoc"
+        ;;
+
     *)
         echo "Nieznana opcja. Użyj --help"
         ;;
