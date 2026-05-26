@@ -1,5 +1,7 @@
 #!/bin/bash
 
+REPO_URL="https://github.com/MerdinTG/lab4-git.git"
+
 case "$1" in
     --date|-d)
         date
@@ -18,6 +20,17 @@ case "$1" in
         done
 
         echo "Utworzono $count plikow log."
+        ;;
+
+    --init)
+        repo_name=$(basename "$REPO_URL" .git)
+
+        git clone "$REPO_URL"
+
+        export PATH="$PATH:$(pwd)/$repo_name"
+
+        echo "Sklonowano repozytorium do katalogu $repo_name"
+        echo "Dodano katalog do PATH dla aktualnej sesji"
         ;;
 
     --help|-h)
