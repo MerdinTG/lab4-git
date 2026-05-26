@@ -53,10 +53,10 @@ case "$1" in
 
     --help|-h)
         echo "Dostepne opcje:"
-        echo "--date          wyswietla dzisiejsza date"
-        echo "--logs          tworzy 100 plikow log"
-        echo "--logs N        tworzy N plikow log"
-        echo "--help          wyswietla pomoc"
+        echo "--date, -d      wyswietla dzisiejsza date"
+        echo "--logs, -l      tworzy 100 plikow log"
+        echo "--logs N, -l N  tworzy N plikow log"
+        echo "--help, -h      wyswietla pomoc"
         ;;
 
     *)
